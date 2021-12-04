@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+y
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+           Name <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Name" type="text">
+        </div>
+        <div class="form-group">
+            Gender <input class="form-control" name="password" placeholder="Gender" type="text">
+        </div>
+        <div class="form-group">
+           Parent 1 <input class="form-control" name="parent1" placeholder="[Optional]" type="password">
+        </div>
+         <div class="form-group">
+           Parent 2 <input class="form-control" name="parent2" placeholder="[Optional]" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}
