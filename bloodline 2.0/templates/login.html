@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        {% if u == 0 %}<div class="alert alert-danger" role="alert">Please input a username!</div>{% endif %}
+        {% if p == 0 %}<div class="alert alert-danger" role="alert">Please input a password!</div>{% endif %}
+        {% if c == 0 %}<div class="alert alert-danger" role="alert">Invalid username and/or password!</div>{% endif %}
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <a class="btn btn-outline-danger" href="/register">Register</a>
+        </button><button class="btn btn-danger" type="submit">Log In</button>
+    </form>
+{% endblock %}

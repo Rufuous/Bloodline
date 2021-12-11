@@ -1,0 +1,105 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+.form-control:focus
+{
+  /* Creates a red glow on text fields instead of the bootstrap default of blue */
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.nav-link
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.navbar-brand
+{
+    color: white;
+    font-weight: bold;
+}
+
+.alert
+{
+  display:inline-block;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 140%;
+}
+.btn
+{
+    margin: 10px;
+}
+
+.perfect-center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+
+p a
+{
+    color: #CF1A1A;
+}
+
+p a:hover
+{
+    color: #CF1A1A;
+    text-decoration: underline;
+}

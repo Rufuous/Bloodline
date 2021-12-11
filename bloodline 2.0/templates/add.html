@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block head %}
+Add Member
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="container">
+            {% if f == 0 %}<div class="alert alert-danger" role="alert">Please input a first name!</div>{% endif %}
+            {% if l == 0 %}<div class="alert alert-danger" role="alert">Please input a last name!</div>{% endif %}
+            {% if g == 0 %}<div class="alert alert-danger" role="alert">Please select a gender!</div>{% endif %}
+
+            <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                   First Name
+                </div>
+               <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                   <input autocomplete="off" autofocus class="form-control" name="fname" type="text">
+               </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                   Last Name
+                </div>
+                    <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                       <input autocomplete="off" autofocus class="form-control" name="lname" type="text">
+                    </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                    Gender
+                </div>
+                <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                    <select class="form-control" name="gender" type="text">
+                        <option value="default" disabled selected>--Select Gender--</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                    Parent-1 First Name
+                </div>
+                <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                    <input class="form-control" name="fparent1" placeholder="[Optional]" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                    Parent-1 Last Name
+                </div>
+                <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                    <input class="form-control" name="lparent1" placeholder="[Optional]" type="text">
+                </div>
+            </div>
+             <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                   Parent-2 First Name
+                </div>
+                <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                    <input class="form-control" name="fparent2" placeholder="[Optional]" type="text">
+                </div>
+            </div>
+                <div class="form-group row">
+                <div class="col-md-5 col-sm-5 col-xs-5" align="right">
+                    Parent-2 Last Name
+                </div>
+                <div align="left" class="col-md-7 col-sm-7 col-xs-7">
+                    <input class="form-control" name="lparent2" placeholder="[Optional]" type="text">
+                </div>
+            </div>
+            <a class="btn btn-outline-danger" href="/">Cancel</a>
+            <button class="btn btn-danger" type="submit">
+                Add
+            </button>
+        </div>
+    </form>
+{% endblock %}

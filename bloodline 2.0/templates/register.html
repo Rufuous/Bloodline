@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+
+        {% if u == 0 %}<div class="alert alert-danger" role="alert">Please input a username!</div>{% endif %}
+        {% if p == 0 %}<div class="alert alert-danger" role="alert">Please input a password!</div>{% endif %}
+        {% if c == 0 %}<div class="alert alert-danger" role="alert">Passwords do not match!</div>{% endif %}
+        {% if u == 1 %}<div class="alert alert-danger" role="alert">Username already exists. <a href="/login" class="alert-link">Click here to log in!</a></div>{% endif %}
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Re-enter Password" type="password">
+        </div>
+        <button class="btn btn-danger" type="submit">Register</button>
+    </form>
+{% endblock %}
